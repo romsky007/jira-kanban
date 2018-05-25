@@ -1,0 +1,22 @@
+.peel{ 
+    width: 180px;
+    height: 180px;
+    background:linear-gradient(to top right, yellow 60%, orange 75%, whitesmoke 75%, whitesmoke 100%);
+    padding-top: 80px;
+    position: relative;
+    border-radius:100%;
+    text-align: center;
+    font: bold 24px helvetica;
+    box-shadow: 0 0 0 1px smokewhite;  
+  }
+  .peel:before{
+    content:"";
+    position: absolute;
+    top:-90px;
+    left:91px;
+    width: 180px;
+    height: 180px;
+    background:linear-gradient(to bottom left, transparent 75%, yellow 75%, orange 98%);
+    border-radius:100%;
+  
+  }
