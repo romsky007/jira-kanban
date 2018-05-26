@@ -1,36 +1,30 @@
 /*jshint esversion: 6 */
 import React from "react";
-import ReactDOM from "react-dom";
-import { getData } from "./FetchUtils";
 import StickyNodeFolder from './StickyNodeFolder';
 import JiraView from './JiraView';
 
 class AppKanban extends React.Component {
 
-  static jiraContentId = "jira-content";
   state = {
-    fishes: {},
-    order: {}
+    jiraUrl: null
   };
 
-  fetchFromLink = dataURL => {
-      let result = getData(dataURL);
-
-      console.log("get data: " + result);
-      ReactDOM.render(result, document.querySelector("#" + this.jiraContentId));
+  updateJiraUrl = jiraUrl => {
+    console.log("updateJiraUrl on " + jiraUrl);
+    this.setState({jiraUrl});
    }
 
   render() {
     return (
       <div className="app-view">
         <div className="bar-kanban">
-          <StickyNodeFolder headline="BackLog" fetchFromLink={this.fetchFromLink} />
-          <StickyNodeFolder headline="Ready" fetchFromLink={this.fetchFromLink} />
-          <StickyNodeFolder headline="Today" fetchFromLink={this.fetchFromLink} />
-          <StickyNodeFolder headline="InProgress" fetchFromLink={this.fetchFromLink} />
-          <StickyNodeFolder headline="Done" fetchFromLink={this.fetchFromLink} />
+          <StickyNodeFolder headline="BackLog" updateJiraUrl={this.updateJiraUrl} />
+          <StickyNodeFolder headline="Ready" updateJiraUrl={this.updateJiraUrl} />
+          <StickyNodeFolder headline="Today" updateJiraUrl={this.updateJiraUrl} />
+          <StickyNodeFolder headline="InProgress" updateJiraUrl={this.updateJiraUrl} />
+          <StickyNodeFolder headline="Done" updateJiraUrl={this.updateJiraUrl} />
         </div>
-        <JiraView contentId={this.jiraContentId} />
+        <JiraView jiraUrl={this.state.jiraUrl}/>
         </div>
     );
   }
