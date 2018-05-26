@@ -1,7 +1,9 @@
 {
-  "name": "cotd",
+  "name": "personal-kanban",
   "version": "0.0.3",
   "private": true,
+  "homepage" : "https://romsky007.github.io/jira-kanban,
+
   "devDependencies": {
     "ajv": "^6.5.0",
     "concurrently": "3.5.1"

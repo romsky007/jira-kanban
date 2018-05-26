@@ -12,12 +12,12 @@ class StickyNodeFolder extends React.Component {
         <ul>
             <StickyNode 
               updateJiraUrl={this.props.updateJiraUrl} 
-              link="http://google.com"  
+              link="https://nodejs.org/en/"  
               title="Issue 7384" 
               content="Text Content #1" />
               
             <StickyNode updateJiraUrl={this.props.updateJiraUrl} link="http://ibm.com"  title="Issue 7385" content="Text Content #2" />
-            <StickyNode updateJiraUrl={this.props.updateJiraUrl} link="http://oracle.com"  title="Issue 7386" content="Text Content #3" />
+            <StickyNode updateJiraUrl={this.props.updateJiraUrl} link="https://angularjs.org/"  title="Issue 7386" content="Text Content #3" />
             <StickyNode updateJiraUrl={this.props.updateJiraUrl} link="http://redhat.com"  title="Issue 7387" content="Text Content #4" />
         </ul> 
       </div>   

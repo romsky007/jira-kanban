@@ -168,3 +168,8 @@ ol li a{color:#fff;}
   width: 100%;
   height:100%;
 }
+
+.sticky-note-li > * {
+  margin: 2px;
+  top: 10px;
+}

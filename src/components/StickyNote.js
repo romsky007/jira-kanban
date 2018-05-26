@@ -10,9 +10,6 @@ class StickyNode extends React.Component {
   render() {
     return (
       <li className="sticky-note-li">
-        <button onClick={this.onLinkClick}>
-          Load Ticket
-        </button>
         <a className="sticky-note-a" onClick={this.onLinkClick}>
           <h3 className="sticky-note-title">{this.props.title}</h3>
           <hr />
